@@ -14,6 +14,8 @@
 		9D9CAC6929A0D786007D3293 /* GameBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9CAC5F29A0D786007D3293 /* GameBuilder.swift */; };
 		9D9CAC6C29A0D786007D3293 /* GameOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9CAC6229A0D786007D3293 /* GameOutput.swift */; };
 		9D9CAC7329A0DB1D007D3293 /* GameFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9CAC7229A0DB1D007D3293 /* GameFlow.swift */; };
+		9DC1428129AB5A46003A7275 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC1428029AB5A46003A7275 /* Player.swift */; };
+		9DC1428429AB621F003A7275 /* Target.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC1428329AB621F003A7275 /* Target.swift */; };
 		9DCF28BC29979F370016DB84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCF28BB29979F370016DB84 /* AppDelegate.swift */; };
 		9DCF28BE29979F370016DB84 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCF28BD29979F370016DB84 /* SceneDelegate.swift */; };
 		9DCF28C529979F3A0016DB84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DCF28C429979F3A0016DB84 /* Assets.xcassets */; };
@@ -35,6 +37,8 @@
 		9D9CAC5F29A0D786007D3293 /* GameBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBuilder.swift; sourceTree = "<group>"; };
 		9D9CAC6229A0D786007D3293 /* GameOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOutput.swift; sourceTree = "<group>"; };
 		9D9CAC7229A0DB1D007D3293 /* GameFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameFlow.swift; sourceTree = "<group>"; };
+		9DC1428029AB5A46003A7275 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Player.swift; path = ../../../../../catchME/CatchMe/Modules/Actors/Player/Player.swift; sourceTree = "<group>"; };
+		9DC1428329AB621F003A7275 /* Target.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Target.swift; path = ../../../../../catchME/CatchMe/Modules/Actors/Targets/Target.swift; sourceTree = "<group>"; };
 		9DCF28B829979F370016DB84 /* CatchMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatchMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DCF28BB29979F370016DB84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DCF28BD29979F370016DB84 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +111,31 @@
 			path = Flow;
 			sourceTree = "<group>";
 		};
+		9DC1427E29AB5A26003A7275 /* Actors */ = {
+			isa = PBXGroup;
+			children = (
+				9DC1428229AB6214003A7275 /* Targets */,
+				9DC1427F29AB5A33003A7275 /* Player */,
+			);
+			path = Actors;
+			sourceTree = "<group>";
+		};
+		9DC1427F29AB5A33003A7275 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				9DC1428029AB5A46003A7275 /* Player.swift */,
+			);
+			path = Player;
+			sourceTree = "<group>";
+		};
+		9DC1428229AB6214003A7275 /* Targets */ = {
+			isa = PBXGroup;
+			children = (
+				9DC1428329AB621F003A7275 /* Target.swift */,
+			);
+			path = Targets;
+			sourceTree = "<group>";
+		};
 		9DCF28AF29979F360016DB84 = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +168,7 @@
 		9DCF28CF2998DE710016DB84 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				9DC1427E29AB5A26003A7275 /* Actors */,
 				9D9CAC5929A0D773007D3293 /* Game */,
 				9DCF28D02998DE780016DB84 /* Welcome */,
 			);
@@ -273,9 +303,11 @@
 				9DCF28FD2998E03D0016DB84 /* WelcomeBuilder.swift in Sources */,
 				9DCF28FB2998E03D0016DB84 /* WelcomePresenterProtocol.swift in Sources */,
 				9D9CAC7329A0DB1D007D3293 /* GameFlow.swift in Sources */,
+				9DC1428429AB621F003A7275 /* Target.swift in Sources */,
 				9D9CAC6629A0D786007D3293 /* GameViewControllerProtocol.swift in Sources */,
 				9DCF28BE29979F370016DB84 /* SceneDelegate.swift in Sources */,
 				9DCF28FA2998E03D0016DB84 /* WelcomeViewControllerProtocol.swift in Sources */,
+				9DC1428129AB5A46003A7275 /* Player.swift in Sources */,
 				9DCF28FC2998E03D0016DB84 /* WelcomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
