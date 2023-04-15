@@ -28,6 +28,10 @@ class GameViewController: UIViewController {
         return stackView
     }()
     
+    private lazy var waterController: WaterController = {
+        return WaterController(view: self.view)
+    }()
+    
     init (presenter: GamePresenterProtocol) {
         self.presenter = presenter
         super.init(nibName: nil, bundle: nil)
@@ -46,9 +50,11 @@ class GameViewController: UIViewController {
         playerCustom.isUserInteractionEnabled = true
         playerCustom.addGestureRecognizer(panGesture)
         
-        let waterController = WaterController(view: view)
+        waterController.setPlayer(player: playerCustom)
         waterController.start()
     }
+    
+    
     
     @objc
     private func draggedView(_ sender: UIPanGestureRecognizer) {
@@ -68,9 +74,13 @@ class GameViewController: UIViewController {
     
     private func setUpPlayerCustomLayout() {
         view.addSubview(playerCustom)
-        playerCustom.translatesAutoresizingMaskIntoConstraints = false
-        playerCustom.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        playerCustom.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16).isActive = true
+        view.bringSubviewToFront(playerCustom)
+        playerCustom.translatesAutoresizingMaskIntoConstraints = true
+       let rect =  CGRect(origin: CGPoint(x: view.frame.midX, y: view.frame.maxY - 100), size: CGSize(width: 150, height: 40))
+        playerCustom.frame = rect
+        playerCustom.layoutIfNeeded()
+//        playerCustom.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+//        playerCustom.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16).isActive = true
     }
     
 }

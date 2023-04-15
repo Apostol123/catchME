@@ -17,7 +17,7 @@ class PlayerCustom: UIView {
         layer.borderWidth = 1
         layer.borderColor = UIColor.black.cgColor
         layer.cornerRadius = 8
-        heightAnchor.constraint(equalToConstant: 80).isActive = true
-        widthAnchor.constraint(equalToConstant: 160).isActive = true
+//        heightAnchor.constraint(equalToConstant: 80).isActive = true
+//        widthAnchor.constraint(equalToConstant: 160).isActive = true
     }
 }
